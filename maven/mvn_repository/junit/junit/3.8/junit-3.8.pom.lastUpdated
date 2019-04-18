@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Apr 26 11:23:19 CST 2016
+http\://127.0.0.1\:8081/nexus/content/groups/public/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1461640999387
+http\://127.0.0.1\:8081/nexus/content/groups/public/.lastUpdated=1461640987328
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact junit\:junit\:pom\:3.8 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

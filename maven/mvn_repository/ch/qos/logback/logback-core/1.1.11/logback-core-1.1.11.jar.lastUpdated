@@ -1,0 +1,9 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Jan 12 08:49:07 CST 2018
+http\://repo.spring.io/ext-release-local/.error=Could not transfer artifact ch.qos.logback\:logback-core\:jar\:1.1.11 from/to spring-ext (http\://repo.spring.io/ext-release-local/)\: The operation was cancelled.
+http\://repo.spring.io/snapshot/.error=Could not transfer artifact ch.qos.logback\:logback-core\:jar\:1.1.11 from/to spring-snapshots (http\://repo.spring.io/snapshot)\: The operation was cancelled.
+http\://repo.spring.io/milestone/.error=Could not transfer artifact ch.qos.logback\:logback-core\:jar\:1.1.11 from/to spring-milestones (http\://repo.spring.io/milestone)\: The operation was cancelled.
+@default-spring-snapshots-http\://repo.spring.io/snapshot/.lastUpdated=1515690984363
+https\://repo.maven.apache.org/maven2/.lastUpdated=1515718147388
+@default-spring-milestones-http\://repo.spring.io/milestone/.lastUpdated=1515690984334
+@default-spring-ext-http\://repo.spring.io/ext-release-local/.lastUpdated=1515690984305

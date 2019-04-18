@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sun Dec 25 20:59:02 CST 2016
+https\://raw.github.com/dragome/dragome/master/maven/.lastUpdated=1482670742120
+https\://raw.github.com/dragome/dragome/master/maven/.error=
+http\://repository.jboss.org/nexus/content/groups/public/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1482670742120
+http\://repository.jboss.org/nexus/content/groups/public/.lastUpdated=1482670738400
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact io.netty\:netty-codec\:jar\:sources\:4.0.28.Final from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.

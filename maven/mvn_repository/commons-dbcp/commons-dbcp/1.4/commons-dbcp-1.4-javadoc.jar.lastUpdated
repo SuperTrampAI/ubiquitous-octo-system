@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Jan 12 10:29:22 CST 2018
+http\://127.0.0.1\:8081/nexus/content/groups/public/.error=Could not transfer artifact commons-dbcp\:commons-dbcp\:jar\:javadoc\:1.4 from/to my_public_repository (http\://127.0.0.1\:8081/nexus/content/groups/public/)\: Connection refused\: connect
+@default-my_public_repository-http\://127.0.0.1\:8081/nexus/content/groups/public/.lastUpdated=1469608714047
+https\://repo.spring.io/milestone/.error=
+https\://repo.spring.io/milestone/.lastUpdated=1515724162761
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1469608714047
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact commons-dbcp\:commons-dbcp\:jar\:javadoc\:1.4 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - JOnAS Configurator
+  - Copyright (C) 2008 Bull S.A.S.
+  - Copyright (C) 2008 France Telecom R&D
+  - Contact: jonas-team@ow2.org
+  -
+  - This library is free software; you can redistribute it and/or
+  - modify it under the terms of the GNU Lesser General Public
+  - License as published by the Free Software Foundation; either
+  - version 2.1 of the License, or any later version.
+  -
+  - This library is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  - Lesser General Public License for more details.
+  -
+  - You should have received a copy of the GNU Lesser General Public
+  - License along with this library; if not, write to the Free Software
+  - Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+  - USA
+  -
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - $Id: pom.xml 15842 2008-11-26 16:38:29Z alitokmen $
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>org.ow2</groupId>
+    <artifactId>ow2</artifactId>
+    <version>1.1</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.ow2.jonas.tools</groupId>
+  <artifactId>configurator</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.2</version>
+  <name>JOnAS :: Configurator</name>
+
+  <modules>
+    <module>api</module>
+    <module>impl</module>
+    <module>configurator</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.4</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.14</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>xerces</groupId>
+      <artifactId>xercesImpl</artifactId>
+      <version>2.8.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <scm>
+    <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/jonas/sub-projects/configurator/tags/configurator-1.0.2</connection>
+    <developerConnection>scm:svn:svn+ssh://alitokmen@svn.forge.objectweb.org/svnroot/jonas/sub-projects/configurator/tags/configurator-1.0.2</developerConnection>
+    <url>http://svn.forge.objectweb.org/cgi-bin/viewcvs.cgi/jonas/sub-projects/configurator/tags/configurator-1.0.2</url>
+  </scm>
+</project>

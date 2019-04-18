@@ -1,0 +1,10 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri May 18 11:08:06 CST 2018
+http\://127.0.0.1\:8081/nexus/content/groups/public/.error=Could not transfer artifact aopalliance\:aopalliance\:jar\:javadoc\:1.0 from/to my_public_repository (http\://127.0.0.1\:8081/nexus/content/groups/public/)\: Connection refused\: connect
+@default-my_public_repository-http\://127.0.0.1\:8081/nexus/content/groups/public/.lastUpdated=1469608687855
+https\://repo.spring.io/milestone/.error=
+https\://repo.spring.io/milestone/.lastUpdated=1515724629360
+https\://oss.sonatype.org/content/repositories/springsource-milestones/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1469608687855
+https\://oss.sonatype.org/content/repositories/springsource-milestones/.lastUpdated=1526612886499
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact aopalliance\:aopalliance\:jar\:javadoc\:1.0 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

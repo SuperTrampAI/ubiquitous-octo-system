@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Aug 28 15:32:33 CST 2018
+tomcat-embed-core-8.5.32.jar>central=
+tomcat-embed-core-8.5.32-sources.jar>central=
+tomcat-embed-core-8.5.32.pom>central=

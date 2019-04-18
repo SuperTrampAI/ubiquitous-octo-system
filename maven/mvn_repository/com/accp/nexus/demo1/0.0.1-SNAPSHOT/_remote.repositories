@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Mar 26 14:59:46 CST 2018
+demo1-0.0.1-20180326.062240-2.jar>nexus1=
+demo1-0.0.1-SNAPSHOT.jar>=
+demo1-0.0.1-20180326.065849-3.pom>nexus1=
+demo1-0.0.1-20180326.065849-3.jar>nexus1=
+demo1-0.0.1-SNAPSHOT.pom>=
+demo1-0.0.1-20180326.062240-2.pom>nexus1=

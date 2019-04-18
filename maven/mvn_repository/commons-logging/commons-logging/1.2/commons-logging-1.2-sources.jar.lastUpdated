@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sun May 13 09:50:06 CST 2018
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1526176206057
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact commons-logging\:commons-logging\:jar\:sources\:1.2 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

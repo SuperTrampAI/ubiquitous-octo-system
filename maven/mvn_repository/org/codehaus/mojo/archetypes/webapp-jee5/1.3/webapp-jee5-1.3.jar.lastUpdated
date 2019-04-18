@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Mar 25 08:52:07 CST 2017
+http\://mirrors.ibiblio.org/pub/mirrors/maven2/.error=Could not transfer artifact org.codehaus.mojo.archetypes\:webapp-jee5\:jar\:1.3 from/to ibiblio (http\://mirrors.ibiblio.org/pub/mirrors/maven2/)\: mirrors.ibiblio.org
+@default-ibiblio-http\://mirrors.ibiblio.org/pub/mirrors/maven2/.lastUpdated=1490403127135

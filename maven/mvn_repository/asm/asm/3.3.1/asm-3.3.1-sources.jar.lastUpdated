@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Jul 27 16:38:37 CST 2016
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1469608717323
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact asm\:asm\:jar\:sources\:3.3.1 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

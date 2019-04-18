@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jul 25 23:04:06 CST 2016
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1469459046753
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.slf4j\:slf4j-log4j12\:pom\:${slf4j.version} from/to central (https\://repo.maven.apache.org/maven2)\: Illegal character in path at index 62\: https\://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/${slf4j.version}/slf4j-log4j12-${slf4j.version}.pom

@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Mar 13 14:12:10 CST 2018
+@default-dragome-https\://raw.github.com/dragome/dragome/master/maven/.lastUpdated=1520921530003
+https\://raw.github.com/dragome/dragome/master/maven/.error=Could not transfer artifact io.netty\:netty-transport\:jar\:javadoc\:4.0.28.Final from/to dragome (https\://raw.github.com/dragome/dragome/master/maven)\: connect timed out
+http\://repository.jboss.org/nexus/content/groups/public/.error=Could not transfer artifact io.netty\:netty-transport\:jar\:javadoc\:4.0.28.Final from/to JBOSS_NEXUS (http\://repository.jboss.org/nexus/content/groups/public)\: connect timed out
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1520921530007
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact io.netty\:netty-transport\:jar\:javadoc\:4.0.28.Final from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.
+@default-JBOSS_NEXUS-http\://repository.jboss.org/nexus/content/groups/public/.lastUpdated=1520921519906

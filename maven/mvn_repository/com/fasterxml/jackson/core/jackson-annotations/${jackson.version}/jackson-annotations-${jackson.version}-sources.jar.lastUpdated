@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Jul 30 15:20:38 CST 2016
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1469863238655
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.fasterxml.jackson.core\:jackson-annotations\:jar\:sources\:${jackson.version} from/to central (https\://repo.maven.apache.org/maven2)\: Illegal character in path at index 85\: https\://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/${jackson.version}/jackson-annotations-${jackson.version}-sources.jar

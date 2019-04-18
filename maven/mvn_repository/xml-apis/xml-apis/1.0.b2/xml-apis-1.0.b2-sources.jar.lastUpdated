@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Jun 13 17:43:01 CST 2018
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1528882981700
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact xml-apis\:xml-apis\:jar\:sources\:1.0.b2 from/to central (https\://repo.maven.apache.org/maven2)\: Connection reset

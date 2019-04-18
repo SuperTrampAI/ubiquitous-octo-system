@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 23:59:11 CST 2017
+http\://127.0.0.1\:8081/nexus/content/groups/public/.error=Could not transfer artifact org.springframework\:spring-test\:pom\:4.0.9.RELEASE from/to my_public_repository (http\://127.0.0.1\:8081/nexus/content/groups/public/)\: Connection refused\: connect
+http\://repo2.maven.org/maven2/.lastUpdated=1490172238974
+@default-my_public_repository-http\://127.0.0.1\:8081/nexus/content/groups/public/.lastUpdated=1490172238615
+http\://mirrors.ibiblio.org/pub/mirrors/maven2/.lastUpdated=1490371151190
+https\://repo.maven.apache.org/maven2/.lastUpdated=1475937282393

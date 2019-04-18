@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 23:59:15 CST 2017
+http\://127.0.0.1\:8081/nexus/content/groups/public/.error=Could not transfer artifact com.fasterxml\:oss-parent\:pom\:25 from/to my_public_repository (http\://127.0.0.1\:8081/nexus/content/groups/public/)\: Connection refused\: connect
+http\://repo2.maven.org/maven2/.lastUpdated=1490172249317
+@default-my_public_repository-http\://127.0.0.1\:8081/nexus/content/groups/public/.lastUpdated=1490172249104
+http\://mirrors.ibiblio.org/pub/mirrors/maven2/.lastUpdated=1490371155153

@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Mar 13 14:09:28 CST 2018
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1520921368736
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact javax\:javaee-api\:jar\:javadoc\:8.0 from/to central (https\://repo.maven.apache.org/maven2)\: The operation was cancelled.

@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri May 18 11:10:16 CST 2018
+https\://oss.sonatype.org/content/repositories/springsource-milestones/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1469608717308
+https\://oss.sonatype.org/content/repositories/springsource-milestones/.lastUpdated=1526613016236
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact javax.servlet.jsp\:jsp-api\:jar\:javadoc\:2.1 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

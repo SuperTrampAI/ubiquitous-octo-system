@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.buildsupport</groupId>
+    <artifactId>public-parent</artifactId>
+    <version>5</version>
+  </parent>
+
+  <groupId>org.sonatype.sisu.inject</groupId>
+  <artifactId>cglib</artifactId>
+  <version>3.1.1</version>
+
+  <name>CGLIB</name>
+  <url>http://sourceforge.net/projects/cglib/</url>
+  <inceptionYear>2002</inceptionYear>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Juozas Baliuka</name>
+      <id>baliuka</id>
+    </developer>
+    <developer>
+      <name>Chris Nokleberg</name>
+      <id>herbyderby</id>
+    </developer>
+    <developer>
+      <name>Matas Ramoska</name>
+      <id>mr226maf</id>
+    </developer>
+    <developer>
+      <name>Sam Berlin</name>
+      <id>sameb</id>
+    </developer>
+    <developer>
+      <name>Wes Biggs</name>
+      <id>wbiggs</id>
+    </developer>
+  </developers>
+
+  <mailingLists>
+    <mailingList>
+      <name>cglib developer list</name>
+      <subscribe>http://lists.sourceforge.net/lists/listinfo/cglib-devel</subscribe>
+      <unsubscribe>http://lists.sourceforge.net/lists/listinfo/cglib-devel</unsubscribe>
+      <archive>http://sourceforge.net/mail/?group_id=56933</archive>
+    </mailingList>
+  </mailingLists>
+
+  <scm>
+    <connection>scm:git:git@github.com:sonatype/sisu-cglib.git</connection>
+    <developerConnection>scm:git:git@github.com:sonatype/sisu-cglib.git</developerConnection>
+    <url>http://github.com/sonatype/sisu-cglib</url>
+    <tag>cglib-3.1.1</tag>
+  </scm>
+  <issueManagement>
+    <system>SourceForge</system>
+    <url>http://sourceforge.net/tracker/?group_id=56933</url>
+  </issueManagement>
+
+  <properties>
+    <asm.version>5.0_BETA</asm.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>${asm.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-util</artifactId>
+      <version>${asm.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.8.2</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-commons</artifactId>
+      <version>${asm.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.2</source>
+          <target>1.2</target>
+        </configuration>
+        <executions>
+          <execution>
+            <id>default-testCompile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+            <configuration>
+              <source>1.5</source>
+              <target>1.5</target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+          <test>TestAll</test>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Specification-Vendor>cglib.sourceforge.net</Specification-Vendor>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

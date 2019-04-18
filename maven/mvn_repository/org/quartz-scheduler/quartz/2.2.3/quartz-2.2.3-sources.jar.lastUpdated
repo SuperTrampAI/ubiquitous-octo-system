@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Aug 09 08:57:31 CST 2017
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1502240251974
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.quartz-scheduler\:quartz\:jar\:sources\:2.2.3 from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

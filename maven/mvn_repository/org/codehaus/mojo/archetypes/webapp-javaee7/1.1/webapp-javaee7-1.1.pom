@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>org.codehaus.mojo.archetypes</groupId>
+    <artifactId>mojo-archetypes</artifactId>
+    <version>6</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>webapp-javaee7</artifactId>
+  <version>1.1</version>
+  <packaging>maven-archetype</packaging>
+  <name>Java EE 7 WAR Archetype</name>
+  <description>Archetype for a web application using Java EE 7.</description>
+  <scm>
+    <connection>scm:svn:http://svn.codehaus.org/mojo/tags/webapp-javaee7-1.1</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/tags/webapp-javaee7-1.1</developerConnection>
+    <url>http://fisheye.codehaus.org/browse/mojo/tags/webapp-javaee7-1.1</url>
+  </scm>
+</project>

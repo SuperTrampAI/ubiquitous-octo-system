@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Dec 16 16:49:43 CST 2016
+http\://127.0.0.1\:8081/nexus/content/groups/public/.error=Could not transfer artifact org.springframework\:spring-orm\:jar\:javadoc\:4.0.9.RELEASE from/to my_public_repository (http\://127.0.0.1\:8081/nexus/content/groups/public/)\: Connection refused\: connect
+@default-my_public_repository-http\://127.0.0.1\:8081/nexus/content/groups/public/.lastUpdated=1481878183508
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1476241903527
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.springframework\:spring-orm\:jar\:javadoc\:4.0.9.RELEASE from/to central (https\://repo.maven.apache.org/maven2)\: repo.maven.apache.org

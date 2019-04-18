@@ -1,0 +1,10 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jan 15 13:42:41 CST 2018
+http\://repo.spring.io/ext-release-local/.lastUpdated=1515994961143
+http\://repo.spring.io/milestone/.error=
+http\://repo.spring.io/ext-release-local/.error=
+http\://repo.spring.io/snapshot/.lastUpdated=1515994961702
+http\://repo.spring.io/snapshot/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1515994960055
+http\://repo.spring.io/milestone/.lastUpdated=1515994961409
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.logging.log4j\:log4j-api\:pom\:2.4.1 from/to central (https\://repo.maven.apache.org/maven2)\: e\:\\mvn_repository\\org\\apache\\logging\\log4j\\log4j-api\\2.4.1\\aether-308e86ca-0cb4-40bf-a2c8-b72878176b37-log4j-api-2.4.1.pom-in-progress (\u7CFB\u7EDF\u627E\u4E0D\u5230\u6307\u5B9A\u7684\u6587\u4EF6\u3002)
