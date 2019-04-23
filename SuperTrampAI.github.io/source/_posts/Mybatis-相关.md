@@ -48,11 +48,14 @@ ${}和#{}
 ### xml映射配置文件
     properties 语法：
     <!-- 定义 -->
+		~~~
     <properties>
         <property name="username" value="root"/>
         <property name="password" value="root"/>
     </properties>
     <!-- 使用 -- >
+		~~~
+		~~~
     <dataSource type="POOLED">
         <property name="driver" value="${driver}"/>
         <property name="url" value="${url}"/>
@@ -60,8 +63,9 @@ ${}和#{}
         <property name="password" value="${password}"/>
 
     </dateSource>
-
+~~~
     settings(会修改mybatis在运行时的行为方式)
+		~~~
     <settings>
       <setting name="cacheEnabled" value="true"/>
       <setting name="lazyLoadingEnabled" value="true"/>
@@ -81,40 +85,50 @@ ${}和#{}
         <typeAliases>
             <typeAlias alias="student" type="完整dao路径"></typeAlias>
         </typeAlises>  
+				~~~
 ### 动态SQL
 mybatis包含如下动态sql标签
 trim|where|set|foreach|if|choose|when|otherwise|bind
 
 语法：
+~~~
 <choose>
     <when>.......</when>
     <otherwise></otherwise>
 </choose>
-where
-语法：
+~~~
+
+where语法：
+~~~
 <where>
     <if>.....</if>
     <if>.....</if>
     <if>.....</if>
 </where>
+~~~
 如果where元素没有做出想要的，可以使用trim元素来自定义
+~~~
 <trim prefix="WHERE" prefixOverrides="AND | ON">...</trim>
+~~~
 set
 语法：只用于update，set元素可以被用于动态包含更新的列，而不包含不需要更新的。
+~~~
 <set>
     <if test=""></if>
     <if test=""></if>
     <if test=""></if>
 </set>
+~~~
 
 bind,可以在bind语句中定义一个键值对，比如可以定义一个模糊查询的字符串：
+~~~
 "'%' + _ parameter.getTitle() + '%'"，在select语句中使用键。比如：
 <select id="selectBlogsLike" parameterType="Blog" resultType="Blog">
   <bind name="pattern" value="'%' + _ parameter.getTitle() + '%'" />
   SELECT * FROM BLOG
   WHERE title LIKE #{pattern}
 </select>
-
+~~~
 接口绑定xml的方式：
 一种是通过注解绑定,就是在接口的方法上面加上@Select@Update等注解里面包含Sql语句来绑定
 另外一种就是通过xml里面写SQL来绑定,在这种情况下,要指定xml映射文件里面的namespace必须为接口的全路径名.
