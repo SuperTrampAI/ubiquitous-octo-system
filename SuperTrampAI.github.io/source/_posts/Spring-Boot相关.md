@@ -1,13 +1,11 @@
 ---
-title: Spring Boot
-categories: Coder
-date: 2019-04-22 19:21:21
-tags: Spring
-description: Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建
-以及开发过程。
+title: Spring Boot相关
+categories: default
+date: 2019-04-23 20:25:37
+tags:
+description:
 copyright:
 ---
-
 Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建
 以及开发过程。
 <!-- more -->
@@ -40,24 +38,24 @@ Spring Boot 解决了什么问题：简化了Spring构件项目的复杂性，�
 就回滚。但是在容器的配置文件中需要配置事务。
 
 #### spring boot相关问题
-	1. 创建spring boot project的方式？答：在idea上面创建，在网站创建以后导入
-	2. Spring Boot 可以兼容老 Spring 项目吗，如何做？答： 可以兼容，使用 @ImportResource 注解导入老 Spring 项目配置文件。  
-	3. Spring Boot 如何定义多套不同环境配置？答：提供多套配置文件，在主配置文件中调用不同的配置文件
-	4. SpringBoot 实现热部署有哪几种方式？答：引用devtools；自定义配置热部署
-	5. Spring Boot 支持哪些日志框架？答：推荐和默认的日志框架是哪个？默认会使用Logback
+  1. 创建spring boot project的方式？答：在idea上面创建，在网站创建以后导入
+  2. Spring Boot 可以兼容老 Spring 项目吗，如何做？答： 可以兼容，使用 @ImportResource 注解导入老 Spring 项目配置文件。  
+  3. Spring Boot 如何定义多套不同环境配置？答：提供多套配置文件，在主配置文件中调用不同的配置文件
+  4. SpringBoot 实现热部署有哪几种方式？答：引用devtools；自定义配置热部署
+  5. Spring Boot 支持哪些日志框架？答：推荐和默认的日志框架是哪个？默认会使用Logback
   记录日志，并用info级别输出到控制台，也支持log4j，logging主流的日志实现。
-	6. 你如何理解 Spring Boot 中的 Starters？依赖管理是任何复杂项目的关键部分。
+  6. 你如何理解 Spring Boot 中的 Starters？依赖管理是任何复杂项目的关键部分。
   以手动的方式来实现依赖管理不太现实，你得花更多时间，同时你在项目的其他重要方面能付出的
   时间就会变得越少。Spring Boot starter 就是为了解决这个问题而诞生的。
-	7. Spring Boot 自动配置原理是什么？Spring Boot的自动配置背后全依赖于@Conditional注解来实现的。
-	8. 运行 Spring Boot 有哪几种方式？IDE 运行Application这个类的main方法；
+  7. Spring Boot 自动配置原理是什么？Spring Boot的自动配置背后全依赖于@Conditional注解来实现的。
+  8. 运行 Spring Boot 有哪几种方式？IDE 运行Application这个类的main方法；
   在springboot的应用的根目录下运行mvn spring-boot:run；使用mvn install 生成jar后运行
-	9. Spring Boot 需要独立的容器运行吗？内置了tomcat ；jetty等容器。
-	10. Spring Boot 的配置文件有哪几种格式？它们有什么区别？
+  9. Spring Boot 需要独立的容器运行吗？内置了tomcat ；jetty等容器。
+  10. Spring Boot 的配置文件有哪几种格式？它们有什么区别？
   答：application.properties；application.yml
-	11. spring的事务管理：什么是事务？
+  11. spring的事务管理：什么是事务？
   答：Spring boot实现事务的方式：编程式事务和声明式事务（推荐使用这个声明事务的方式）。
-	12. mvc工作流程：用户发起请求到核心控制器，收到请求调用对应的mapping映射器，
+  12. mvc工作流程：用户发起请求到核心控制器，收到请求调用对应的mapping映射器，
   然后找到具体的映射器以及拦截器，返回给控制器，而后调用适配器，具体的处理器，
   处理完后返回mobleAndView。解析并熏染。
   13. starter 是 Spring Boot 的一个重要组成部分，用于限制您需要执行的手动配置依赖项数量。

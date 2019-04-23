@@ -4,7 +4,7 @@ categories: Coder
 date: 2019-04-23 19:44:55
 tags: Mybatis
 description: MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射
-copyright:
+
 ---
 
 ### mybatis是什么
