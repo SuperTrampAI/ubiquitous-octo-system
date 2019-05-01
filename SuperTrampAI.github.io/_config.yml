@@ -6,11 +6,11 @@
 title: XH Li's blog - Input Problem solving Output
 subtitle: 路漫漫其修远兮，吾将上下而求索 # 网站副标题
 description: 功力必不唐娟 #网站描述，给搜索引擎用的，在生成html中的head->meta中可看到
-keywords: 
+keywords:
 author: 李祥洪
 email: lxh800109@gmail.com
 language: zh-Hans
-timezone: 
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -44,7 +44,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -53,7 +53,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
