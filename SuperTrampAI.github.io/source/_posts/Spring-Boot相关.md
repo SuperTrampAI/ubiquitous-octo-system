@@ -4,7 +4,6 @@ categories: default
 date: 2019-04-23 20:25:37
 tags:
 description:
-copyright:
 ---
 Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建
 以及开发过程。
