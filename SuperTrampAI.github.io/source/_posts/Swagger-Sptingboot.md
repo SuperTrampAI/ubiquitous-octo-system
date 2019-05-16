@@ -4,7 +4,6 @@ categories: Coder
 date: 2019-05-17 00:38:06
 tags: swagger2
 description: SpringBoot集成Swagger，方便前后端分离，UI接口文档
-copyright:
 ---
 
 在pom中引入依赖：
