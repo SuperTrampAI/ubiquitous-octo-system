@@ -404,19 +404,28 @@ valine:
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 # You can get your Github ID from https://api.github.com/users/<Github username>
-gitment:
+# gitment:
+#   enable: false
+#   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
+#   count: true # Show comments count in post meta area
+#   lazy: false # Comments lazy loading with a button
+#   cleanly: false # Hide 'Powered by ...' on footer, and more
+#   language: # Force language, or auto switch by theme
+#   github_user: SuperTrampAI # MUST HAVE, Your Github ID 此处 - Your Github ID
+#   github_repo: bolg-comments # MUST HAVE, The repo you use to store Gitment comments
+#   client_id: 7a9c75992689680c945d # MUST HAVE, Github client id for the Gitment
+#   client_secret: ff77f9716c7edc6f716353e10c21ecd2b241d4c9 # EITHER this or proxy_gateway, Github access secret token for the Gitment
+#   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
+#   redirect_protocol:  https # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+
+gitalk:
   enable: true
-  mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
-  count: true # Show comments count in post meta area
-  lazy: false # Comments lazy loading with a button
-  cleanly: false # Hide 'Powered by ...' on footer, and more
-  language: # Force language, or auto switch by theme
-  github_user: SuperTrampAI # MUST HAVE, Your Github ID 此处 - Your Github ID
-  github_repo: gitment-comments # MUST HAVE, The repo you use to store Gitment comments
-  client_id: 85582ef11781dc961cb8 # MUST HAVE, Github client id for the Gitment
-  client_secret: 1465f0e941538d256c604f2d7a0b0c511941f3bc # EITHER this or proxy_gateway, Github access secret token for the Gitment
-  proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
-  redirect_protocol: https # Protocol of redirect_uri with force_redirect_protocol when mint enabled
+  githubID: SuperTrampAI
+  repo: blog-comments
+  clientID: 7a9c75992689680c945d
+  clientSecret: ff77f9716c7edc6f716353e10c21ecd2b241d4c9
+  adminUser: SuperTrampAI
+  distractionFreeMode: true
 
 # Baidu Share
 # Available value:
