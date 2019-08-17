@@ -7,6 +7,9 @@ INSERT INTO USER
    VALUES ('localhost', 'guest', 
    PASSWORD('guest'), 'Y', 'Y', 'Y');
    
+-- 更改mysql密码
+UPDATE USER SET PASSWORD=PASSWORD("password") WHERE USER='root';
+
 -- 新建没有任何权限的用户
 INSERT INTO USER 
    (HOST, USER, PASSWORD) 
