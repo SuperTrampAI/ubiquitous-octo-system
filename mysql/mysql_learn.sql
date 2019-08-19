@@ -49,6 +49,8 @@ mysqladmin -u root -p CREATE supertrampai
 -- 在cmd删除数据库
 mysqladmin -u root -p DROP supertrampai;
 
+create database "fantastic-funicular"
+
 -- 使用数据库
 USE supertrampai;
 

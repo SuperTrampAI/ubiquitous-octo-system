@@ -37,14 +37,14 @@ LOAD DATA LOCAL INFILE '/path/data.txt' INTO TABLE table_name LINES TERMINATED B
 -- insert 新增数据
 INSERT INTO pet 
 VALUES 
-("Fluffy","Harold","cat",'f',"1993-02-04",""),
-("Claws","Gwen","cat",'m',"1994-03-17",""),
-("Buffy","Harold","dog",'f',"1989-05-13",""),
-("Fang","Benny","dog",'m',"1990-08-27",""),
+("Fluffy","Harold","cat",'f',"1993-02-04",null),
+("Claws","Gwen","cat",'m',"1994-03-17",NULL),
+("Buffy","Harold","dog",'f',"1989-05-13",null),
+("Fang","Benny","dog",'m',"1990-08-27",null),
 ("Bowser","Diane","dog",'m',"1979-08-31","1995-07-29"),
-("Chirpy","Gwen","bird",'f',"1998-09-11",""),
-("Whistler","Gwen","bird",'',"1997-12-09",""),
-("Slim","Benny","snake",'m',"1996-04-29","");
+("Chirpy","Gwen","bird",'f',"1998-09-11",null),
+("Whistler","Gwen","bird",'',"1997-12-09",null),
+("Slim","Benny","snake",'m',"1996-04-29",null);
 	
 -- 查询全部
 SELECT * FROM 
@@ -138,3 +138,222 @@ SELECT * FROM pet WHERE NAME LIKE "______";
 
 -- 使用pegexp_like 实现模糊查询 8.0版本才支持该函数
 SELECT * FROM pet WHERE REGEXP_LIKE(NAME, '^b');
+
+-- 区分大小写
+SELECT * FROM pet WHERE REGEXP_LIKE(name, '^b' COLLATE utf8mb4_0900_as_cs);
+SELECT * FROM pet WHERE REGEXP_LIKE(name, BINARY '^B');
+
+-- 查询以fy结尾的name
+SELECT * FROM pet WHERE REGEXP_LIKE(name, 'fy$');
+
+-- 查找name中包含w的
+SELECT * FROM pet WHERE REGEXP_LIKE(name, 'w');
+
+-- 查找包含五个字符的名称
+SELECT * FROM pet WHERE REGEXP_LIKE(name, '^.....$');
+
+--  统计共计多少数据量
+select count(1) FROM pet;
+
+-- 分组统计:每个用户有几个宠物
+select `OWNER`,count(1) from pet GROUP BY `OWNER`;
+
+-- 每种性别的数量
+select sex,count(1) from pet GROUP BY sex;
+
+-- 每个物种的每种性别的数量
+SELECT species, sex,COUNT(1) from pet GROUP BY species,sex;
+
+SET sql_mode = 'ONLY_FULL_GROUP_BY';
+
+-- 创建一个事件表
+CREATE TABLE event (name VARCHAR(20), date DATE,
+       type VARCHAR(15), remark VARCHAR(255));
+
+-- 插入数据
+INSERT into event(name,date,type,remark)
+values("Fluffy","1995-05-15","litter","4 kittens, 3 female, 1 male"),
+			("Buffy","1993-06-23","litter","5 puppies, 2 female, 3 male"),
+			("Buffy","1994-06-19","litter","3 puppies, 3 female"),
+			("Chirpy","1999-03-21","vet","needed beak straightened"),
+			("Slim","1997-08-03","vet","broken rib"),
+			("Bowser","1991-10-12","kennel",""),
+			("Fang","1998-08-28","kennel",""),
+			("Fang","1998-08-28","birthday","Gave him a new chew toy"),
+			("Claws","1998-03-17","birthday","Gave him a new flea collar"),
+			("Whistler","1998-12-09","birthday","First birthday");
+
+SELECT p1.name, p1.sex, p2.name, p2.sex, p1.species
+       FROM pet AS p1 INNER JOIN pet AS p2
+         ON p1.species = p2.species
+         AND p1.sex = 'f' AND p1.death IS NULL
+         AND p2.sex = 'm' AND p2.death IS NULL;
+
+-- 当前使用的数据库
+select DATABASE();
+
+-- 当前数据库的所有表
+show TABLES;
+
+-- 显示对应表结构 
+DESCRIBE pet;
+
+-- AUTO_INCREMENT  自动增长列
+
+CREATE TABLE shop (
+    article INT UNSIGNED  DEFAULT '0000' NOT NULL,
+    dealer  CHAR(20)      DEFAULT ''     NOT NULL,
+    price   DECIMAL(16,2) DEFAULT '0.00' NOT NULL,
+    PRIMARY KEY(article, dealer)); -- 以两个字段为主键
+INSERT INTO shop VALUES
+    (1,'A',3.45),(1,'B',3.99),(2,'A',10.99),(3,'B',1.45),
+    (3,'C',1.69),(3,'D',1.25),(4,'D',19.95);
+		
+select * from shop;
+
+-- 列的最大值
+select MAX(article) article from shop; 
+
+-- 查询出prie最大的一条记录
+-- 方案 1.
+select * from shop where price = (select MAX(price) from shop)
+-- 方案 2.
+SELECT s1.article, s1.dealer, s1.price
+FROM shop s1
+LEFT JOIN shop s2 ON s1.price < s2.price
+WHERE s2.article IS NULL;
+-- 方案 3.SELECT article, dealer, price
+FROM shop
+ORDER BY price DESC
+LIMIT 1;
+
+-- --------------------------------
+SELECT article, MAX(price) AS price
+FROM   shop
+GROUP BY article
+ORDER BY article;
+
+-- 使用自定义变量
+SELECT @min_price:=MIN(price),@max_price:=MAX(price) FROM shop;
+
+-- 使用自定义变量的值!!!
+select @min_price;
+
+SELECT * FROM shop WHERE price=@min_price OR price=@max_price;
+
+-- mysql 中定义外键约束
+
+CREATE TABLE person (
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name CHAR(60) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE shirt (
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    style ENUM('t-shirt', 'polo', 'dress') NOT NULL,
+    color ENUM('red', 'blue', 'orange', 'white', 'black') NOT NULL,
+    owner SMALLINT UNSIGNED NOT NULL REFERENCES person(id),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO person VALUES (NULL, 'Antonio Paz');
+
+SELECT @last := LAST_INSERT_ID();
+
+INSERT INTO shirt VALUES
+(NULL, 'polo', 'blue', @last),
+(NULL, 'dress', 'white', @last),
+(NULL, 't-shirt', 'blue', @last);
+
+INSERT INTO person VALUES (NULL, 'Lilliana Angelovska');
+
+SELECT @last := LAST_INSERT_ID();
+
+INSERT INTO shirt VALUES
+(NULL, 'dress', 'orange', @last),
+(NULL, 'polo', 'red', @last),
+(NULL, 'dress', 'blue', @last),
+(NULL, 't-shirt', 'white', @last);
+
+SELECT * FROM person;
+SELECT * FROM shirt;
+
+SELECT s.* FROM person p INNER JOIN shirt s
+   ON s.owner = p.id
+ WHERE p.name LIKE 'Lilliana%'
+   AND s.color <> 'white';
+
+-- -------------------------
+
+CREATE TABLE t1 (year YEAR(4), month INT UNSIGNED,
+             day INT UNSIGNED);
+INSERT INTO t1 VALUES(2000,1,1),(2000,1,20),(2000,1,30),(2000,2,2),
+            (2000,2,23),(2000,2,23);
+-- 查找某一年某一月的某一天有几条数据 如果一条有两条数据，这只计入一条
+SELECT year,month,BIT_COUNT(BIT_OR(1<<day)) AS days FROM t1
+       GROUP BY year,month;
+
+show GRANTS;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
