@@ -296,13 +296,59 @@ SELECT year,month,BIT_COUNT(BIT_OR(1<<day)) AS days FROM t1
 
 show GRANTS;
 
+-- 数据类型   comment 中的内容依次为： 	存储（字节）	最小值签名	最小值无符号	最大值签名	最大值无符号
+create table data_type_table(
+	column1 TINYINT NOT NULL comment "1	-128	0	127	255",
+	column2 SMALLINT NOT NULL comment "2	-32768	0	32767	65535",
+	column3 MEDIUMINT NOT NULL comment "-8388608	0	8388607	16777215",
+	column4 INT NOT NULL comment "-2147483648	0	2147483647	4294967295",
+	column5 BIGINT NOT NULL comment "-2 63	0	2 63-1	2 64-1",
+	column6 DECIMAL(5,2) NOT NULL comment "货币数据 5是精度， 2是规模  精度表示为值存储的有效位数，刻度表示小数点后可存储的位数。",
+	column7 NUMERIC NOT NULL comment "货币数据",
+	column8 FLOAT NOT NULL comment "单精度值使用四个字节，。",
+	column9 DOUBLE NOT NULL comment "对于双精度值使用八个字节",
+	column10 date	NOT NULL comment "YYYY-MM-DD  支持的范围是 '1000-01-01'到 '9999-12-31' ",
+	column11 DATETIME NOT NULL comment "YYYY-MM-DD hh:mm:ss '1000-01-01 00:00:00'到'9999-12-31 23:59:59'。",
+	column12 TIMESTAMP NOT NULL comment "'1970-01-01 00:00:01'UTC到'2038-01-19 03:14:07'UTC ",
+	column13 TIME NOT NULL comment "hh:mm:ss '-838:59:59'到 '838:59:59'",
+	column14 YEAR  NOT NULL comment "",
+	column15 YEAR(4) NOT NULL comment "",
+	column16 CHAR NOT NULL comment "",
+	column17 BINARY NOT NULL comment "",
+	column17 VARBINARY NOT NULL comment "",
+	column17 BLOB NOT NULL comment "",
+	column17 TEXT NOT NULL comment "",
+	column17 ENUM('x-small', 'small', 'medium', 'large', 'x-large') NOT NULL comment "",
+	column17 SET('a', 'b', 'c', 'd') NOT NULL comment "",
+)
 
+-- 关于TIMESTAMP和DATETIME的自动初始化和更新
 
+-- 使用DEFAULT CURRENT_TIMESTAMP和 ON UPDATE CURRENT_TIMESTAMP，列具有其默认值的当前时间戳，并自动更新为当前时间戳。
+CREATE TABLE t1 (
+  ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
+-- 使用DEFAULT子句但没有ON UPDATE CURRENT_TIMESTAMP子句，该列具有给定的默认值，并且不会自动更新为当前时间戳。
+-- 默认值取决于 DEFAULT子句是指定 CURRENT_TIMESTAMP还是常量值。使用CURRENT_TIMESTAMP，默认为当前时间戳。
+CREATE TABLE t1 (
+  ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  dt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
-
-
-
+-- 默认值
+CREATE TABLE t1 (
+  -- literal defaults
+  i INT         DEFAULT 0,
+  c VARCHAR(10) DEFAULT '',
+  -- expression defaults
+  f FLOAT       DEFAULT (RAND() * RAND()),
+  b BINARY(16)  DEFAULT (UUID_TO_BIN(UUID())),
+  d DATE        DEFAULT (CURRENT_DATE + INTERVAL 1 YEAR),
+  p POINT       DEFAULT (Point(0,0)),
+  j JSON        DEFAULT (JSON_ARRAY())
+);
 
 
 
